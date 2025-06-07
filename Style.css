@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url('https://images.unsplash.com/photo-1504151932400-72d4384f04b3?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(255, 255, 255, 0.52);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.center-box {
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 8px 32px rgba(50,50,50,0.21);
+  border-radius: 20px;
+  padding: 40px 38px 30px 38px;
+  min-width: 340px;
+  max-width: 400px;
+  text-align: center;
+  animation: fadein 1s;
+}
+
+@keyframes fadein {
+  from { opacity: 0; transform: translateY(-50px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+h1 {
+  font-size: 2.1rem;
+  color: #312544;
+  margin-bottom: 6px;
+  letter-spacing: 1.2px;
+}
+
+.subtitle {
+  color: #7d5c85;
+  margin-bottom: 22px;
+  font-size: 1.09rem;
+}
+
+.form-group {
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #473a5a;
+  font-size: 1rem;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px 13px;
+  border-radius: 7px;
+  border: 1px solid #c9bedf;
+  background: #f7f5fa;
+  font-size: 1.04rem;
+  outline: none;
+  margin-top: 2px;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+input:focus, select:focus {
+  border-color: #a083c9;
+}
+
+button[type="submit"] {
+  background: linear-gradient(90deg, #b587d6 0%, #7e61c4 100%);
+  color: white;
+  border: none;
+  padding: 11px 0;
+  font-size: 1.09rem;
+  border-radius: 7px;
+  width: 100%;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 8px;
+  box-shadow: 0 2px 8px #cfc7e7;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+button[type="submit"]:hover {
+  background: linear-gradient(90deg, #a25ac4 0%, #5d4697 100%);
+  box-shadow: 0 4px 16px #cfc7e7;
+}
+
+#msg {
+  margin-top: 14px;
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 1.04rem;
+  background: #d0f7e9;
+  color: #219a7b;
+  border: 1px solid #b3e6d6;
+  display: none;
+  animation: fadein 0.7s;
+}
+
+@media (max-width: 600px) {
+  .center-box {
+    padding: 28px 10px 24px 10px;
+    min-width: unset;
+    max-width: 98vw;
+  }
+}
